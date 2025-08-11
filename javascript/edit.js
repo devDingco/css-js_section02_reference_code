@@ -17,9 +17,15 @@ window.onload = () => {
     일기담는통.제목;
   window.document.getElementById("HTML_일기수정내용입력창").value =
     일기담는통.내용;
-  window.document.getElementsByName("HTML_기분선택버튼").forEach((el) => {
-    if (el.value === 일기담는통.기분) el.checked = true;
-  });
+
+  const 기분선택버튼목록 = window.document.getElementsByName("HTML_기분선택버튼");
+
+  for (let i = 0; i < 기분선택버튼목록.length; i++) {
+    const el = 기분선택버튼목록[i];
+    if (el.value === 일기담는통.기분) {
+      el.checked = true;
+    }
+  }
 };
 
 const JS_수정완료하기기능 = () => {
