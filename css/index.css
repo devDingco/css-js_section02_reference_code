@@ -88,6 +88,17 @@ a {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  transition: transform 0.5s;
+}
+
+.CSS_일기:hover {
+  transform: scale(1.1);
+}
+
+.CSS_일기:hover .CSS_일기사진 {
+  filter: blur(2px);
+  transition: filter 0.5s;
 }
 
 .CSS_일기사진 {
